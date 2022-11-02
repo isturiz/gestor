@@ -7,18 +7,15 @@
       </a>
 
       <!-- buscador -->
-      <div class="flex justify-center items-center">
-        <div class="xl:w-96">
-          <div class="input-group relative flex items-stretch w-full mb-4">
-            <input type="search" class="flex relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Buscar archivo" aria-label="Search">
-          </div>
-        </div>
+      <div class="">
+        <input type="search" class="px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid rounded transition ease-in-out m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Buscar archivo">
       </div>
 
       <div class="flex items-center lg:order-2">
         <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Usuario</a>
-
       </div>
+
+
 
     </div>
   </nav>
