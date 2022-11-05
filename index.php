@@ -19,6 +19,17 @@
   <?php require_once('./view/header/header.php'); ?>
 
 
+  <!-- PRUEBA DE CONEXION -->
+  <?php  
+
+  require_once("./controller/Conexion.php");
+
+
+  $revisarConex = new Conectar;
+  $revisarConex->conexion();
+
+  ?>
+
   <div class="h-screen w-full flex flex-row">
 
     <?php require_once('./view/header/aside.php'); ?>
