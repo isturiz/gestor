@@ -1,30 +1,51 @@
 <header>
-  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+  <nav class="bg-gray-800 border-gray-200 px-4 lg:px-6 py-2.5">
     <div class="flex flex-initial justify-between items-center mx-auto max-w-screen-xl">
       <a href="https://flowbite.com" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">SGT</span>
+        <span class="self-center text-xl font-semibold whitespace-nowrap text-white">SGT</span>
       </a>
 
       <!-- buscador -->
       <div class="">
-        <input type="search" class="px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid rounded transition ease-in-out m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Buscar archivo">
+        <input type="search" class="px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Buscar archivo" />
       </div>
 
-      <div class="flex items-center lg:order-2">
-        <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Usuario</a>
+      <!-- user menu -->
+      <div class="">
+        <div class="flex items-center md:order-2">
+          <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+            <span class="sr-only">Open user menu</span>
+            <img class="w-8 h-8 rounded-full" src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/null/external-user-user-tanah-basah-glyph-tanah-basah-4.png" alt="user photo" />
+          </button>
+          <!-- Dropdown menu -->
+          <div class="hidden z-50 my-4 text-base list-none bg-gray-700 rounded divide-y divide-gray-600 shadow" id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="
+                  position: absolute;
+                  inset: 0px auto auto 0px;
+                  margin: 0px;
+                  transform: translate3d(0px, 10.4px, 0px);
+                ">
+            <div class="py-3 px-4">
+              <span class="block text-sm text-white">Bonnie Green</span>
+              <span class="block text-sm font-medium text-gray-400 truncate">name@flowbite.com</span>
+            </div>
+            <ul class="py-1" aria-labelledby="user-menu-button">
+              <li>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Dashboard</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Settings</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Earnings</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Sign out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-
-      <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-        <li class="py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">Profile</li>
-        <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Settings</li>
-        <li class="py-2 px-4 w-full border-b border-gray-200 dark:border-gray-600">Messages</li>
-        <li class="py-2 px-4 w-full rounded-b-lg">Download</li>
-      </ul>
-
-      
-
     </div>
   </nav>
 </header>
