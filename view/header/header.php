@@ -31,7 +31,7 @@
               </div>
               <ul class="py-1" aria-labelledby="user-menu-button">
                 <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Exit</a>
+                  <a href="../../controller/system/exit.php" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Exit</a>
                 </li>
               </ul>
             </div>
