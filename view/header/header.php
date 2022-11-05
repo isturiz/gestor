@@ -15,7 +15,7 @@
           <div class="flex items-center md:order-2">
             <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
               <span class="sr-only">Open user menu</span>
-              <img class="w-8 h-8 rounded-full" src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/null/external-user-user-tanah-basah-glyph-tanah-basah-4.png" alt="user photo" />
+              <img class="w-8 h-8 rounded-full" src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/FFFFFF/external-user-user-tanah-basah-glyph-tanah-basah-5.png" alt="user photo" />
             </button>
             <!-- Dropdown menu -->
             <div class="hidden z-50 my-4 text-base list-none bg-gray-700 rounded divide-y divide-gray-600 shadow" id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="

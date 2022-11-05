@@ -1,7 +1,6 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
-
-<section class="h-screen">
+<section class="h-screen bg-gray-700">
   <div class="px-6 h-full text-gray-800">
     <div class="flex xl:justify-center justify-center items-center flex-wrap h-full g-6">
       <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
@@ -20,9 +19,8 @@
           <div class="flex justify-between items-center mb-6">
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" id="exampleCheck2" />
-              <label class="form-check-label inline-block text-gray-800" for="exampleCheck2">Remember me</label>
+              <label class="form-check-label inline-block text-white" for="exampleCheck2">Remember me</label>
             </div>
-            <a href="#!" class="text-gray-800">Forgot password?</a>
           </div>
 
           <div class="text-center">

@@ -1,5 +1,5 @@
 <aside class="w-64">
-  <div class="overflow-y-auto bg-gray-800 h-screen">
+    <div class="overflow-y-auto bg-gray-800 h-screen">
 
     <ul class="space-y-2">
       <li>

@@ -1,10 +1,10 @@
 <table class="w-full text-sm text-left text-gray-400">
   <thead class="text-xs uppercase bg-gray-700 text-gray-400">
     <tr>
-      <th scope="col" class="py-3 px-6">Product name</th>
-      <th scope="col" class="py-3 px-6">Color</th>
+      <th scope="col" class="py-3 px-6">File name</th>
+      <th scope="col" class="py-3 px-6">Format</th>
       <th scope="col" class="py-3 px-6">Category</th>
-      <th scope="col" class="py-3 px-6">Price</th>
+      <th scope="col" class="py-3 px-6">Size</th>
       <th scope="col" class="py-3 px-6 text-right">Action</th>
     </tr>
   </thead>
