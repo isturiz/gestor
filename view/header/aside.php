@@ -1,5 +1,6 @@
 <aside class="w-64">
-  <div class="overflow-y-auto py-4 px-3 bg-gray-800 h-full">
+  <div class="overflow-y-auto bg-gray-800 h-screen">
+
     <ul class="space-y-2">
       <li>
         <a href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700">
