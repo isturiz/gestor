@@ -17,9 +17,11 @@ class Conectar
 			$base
 		) or die("Error al conectar");
 
+		if ($conexion) {
+			echo '<script type="text/JavaScript">console.log("work database conection")</script>';
+		};
 
-		// if ($conexion) {
-		// 	echo "Conexion exitosa";
-		// };
 	}
 }
+
+?>
