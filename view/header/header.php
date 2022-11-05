@@ -1,16 +1,17 @@
 <header class="">
     <nav class="bg-gray-800 border-gray-200 px-4 py-2.5">
       <div class="flex flex-initial justify-between items-center mx-auto max-w-screen-xl">
-        <a href="https://flowbite.com" class="flex items-center">
+        <a href="" class="flex items-center">
           <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
           <span class="self-center text-xl font-semibold whitespace-nowrap text-white">SGT</span>
         </a>
 
         <!-- buscador -->
         <div class="">
-          <input type="search" class="px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Buscar archivo" />
+          <input type="search" class="px-3 py-1.5 text-base w-96 font-normal text-gray-700 bg-white border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Buscar archivo" />
         </div>
 
+        <!-- User menu -->
         <div class="">
           <div class="flex items-center md:order-2">
             <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
@@ -25,21 +26,12 @@
                   transform: translate3d(0px, 10.4px, 0px);
                 ">
               <div class="py-3 px-4">
-                <span class="block text-sm text-white">Bonnie Green</span>
-                <span class="block text-sm font-medium text-gray-400 truncate">name@flowbite.com</span>
+                <span class="block text-sm text-white">Mauricio Istúriz</span>
+                <span class="block text-sm font-medium text-gray-400 truncate">odiolauni@gmail.com</span>
               </div>
               <ul class="py-1" aria-labelledby="user-menu-button">
                 <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Dashboard</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Settings</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Earnings</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Sign out</a>
+                  <a href="#" class="block py-2 px-4 text-sm text-gray-200 hover:bg-gray-600 hover:text-white">Exit</a>
                 </li>
               </ul>
             </div>
