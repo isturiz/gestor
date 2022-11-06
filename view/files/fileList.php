@@ -34,7 +34,7 @@
                 <?php echo $row['nombre'];?>
               </th>
               <td class="py-4 px-6"> <?php echo $row['formato'];?> </td>
-              <td class="py-4 px-6"></td>
+              <td class="py-4 px-6"><?php echo $row['idCategoria'];?></td>
               <td class="py-4 px-6"><?php echo $row['peso'];?></td>
               <td class="py-4 px-6 text-right">
                 <a href="#" class="font-medium text-blue-500 hover:underline">Edit</a>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2022 a las 17:35:51
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Host: 127.0.0.1
+-- Generation Time: Nov 07, 2022 at 12:07 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `repositorio`
+-- Database: `repositorio`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `archivo`
+-- Table structure for table `archivo`
 --
 
 CREATE TABLE `archivo` (
@@ -35,10 +35,18 @@ CREATE TABLE `archivo` (
   `formato` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `archivo`
+--
+
+INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`) VALUES
+(1, 1, 'fileTest', '32KB', 'txt'),
+(2, 1, 'hack', '14KB', 'py');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categoria`
+-- Table structure for table `categoria`
 --
 
 CREATE TABLE `categoria` (
@@ -49,7 +57,7 @@ CREATE TABLE `categoria` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `detalle_archivo`
+-- Table structure for table `detalle_archivo`
 --
 
 CREATE TABLE `detalle_archivo` (
@@ -61,7 +69,7 @@ CREATE TABLE `detalle_archivo` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `formato`
+-- Table structure for table `formato`
 --
 
 CREATE TABLE `formato` (
@@ -72,7 +80,7 @@ CREATE TABLE `formato` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `nivel_usuario`
+-- Table structure for table `nivel_usuario`
 --
 
 CREATE TABLE `nivel_usuario` (
@@ -83,7 +91,7 @@ CREATE TABLE `nivel_usuario` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `personal`
+-- Table structure for table `personal`
 --
 
 CREATE TABLE `personal` (
@@ -96,10 +104,17 @@ CREATE TABLE `personal` (
   `idnivel_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `personal`
+--
+
+INSERT INTO `personal` (`cedula`, `nombre`, `apellido`, `telefono`, `correo`, `contraseña`, `idnivel_usuario`) VALUES
+(1, 'admin', 'admin', '0500', 'admin@admin.com', '1', 1);
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ruta`
+-- Table structure for table `ruta`
 --
 
 CREATE TABLE `ruta` (
@@ -108,47 +123,47 @@ CREATE TABLE `ruta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `archivo`
+-- Indexes for table `archivo`
 --
 ALTER TABLE `archivo`
   ADD PRIMARY KEY (`idArchivo`);
 
 --
--- Indices de la tabla `categoria`
+-- Indexes for table `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`idCategoria`);
 
 --
--- Indices de la tabla `detalle_archivo`
+-- Indexes for table `detalle_archivo`
 --
 ALTER TABLE `detalle_archivo`
   ADD PRIMARY KEY (`idArchivo`,`Personal_cedula`);
 
 --
--- Indices de la tabla `formato`
+-- Indexes for table `formato`
 --
 ALTER TABLE `formato`
   ADD PRIMARY KEY (`idFormato`);
 
 --
--- Indices de la tabla `nivel_usuario`
+-- Indexes for table `nivel_usuario`
 --
 ALTER TABLE `nivel_usuario`
   ADD PRIMARY KEY (`idnivel_usuario`);
 
 --
--- Indices de la tabla `personal`
+-- Indexes for table `personal`
 --
 ALTER TABLE `personal`
   ADD PRIMARY KEY (`cedula`);
 
 --
--- Indices de la tabla `ruta`
+-- Indexes for table `ruta`
 --
 ALTER TABLE `ruta`
   ADD PRIMARY KEY (`idArchivo`);
