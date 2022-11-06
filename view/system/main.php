@@ -9,10 +9,6 @@
 
 require_once("../../model/conexion.php");
 
-
-$revisarConex = new Conectar;
-$revisarConex->conexion();
-
 ?>
 
 <div class="h-screen w-full flex flex-row">
