@@ -22,39 +22,27 @@
             </tr>
           </thead>
           <tbody>
+
+              <?php
+              require_once '../../controller/files/fileList.php';
+              while($row = mysqli_fetch_assoc($files))
+              {
+              ?>
+
             <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
               <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap">
-                Apple MacBook Pro 17"
+                <?php echo $row['nombre'];?>
               </th>
-              <td class="py-4 px-6">Sliver</td>
-              <td class="py-4 px-6">Laptop</td>
-              <td class="py-4 px-6">$2999</td>
+              <td class="py-4 px-6"> <?php echo $row['formato'];?> </td>
+              <td class="py-4 px-6"></td>
+              <td class="py-4 px-6"><?php echo $row['peso'];?></td>
               <td class="py-4 px-6 text-right">
                 <a href="#" class="font-medium text-blue-500 hover:underline">Edit</a>
               </td>
             </tr>
-            <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
-              <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap">
-                Microsoft Surface Pro
-              </th>
-              <td class="py-4 px-6">White</td>
-              <td class="py-4 px-6">Laptop PC</td>
-              <td class="py-4 px-6">$1999</td>
-              <td class="py-4 px-6 text-right">
-                <a href="#" class="font-medium text-blue-500 hover:underline">Edit</a>
-              </td>
-            </tr>
-            <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
-              <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap">
-                Magic Mouse 2
-              </th>
-              <td class="py-4 px-6">Black</td>
-              <td class="py-4 px-6">Accessories</td>
-              <td class="py-4 px-6">$99</td>
-              <td class="py-4 px-6 text-right">
-                <a href="#" class="font-medium text-blue-500 hover:underline">Edit</a>
-              </td>
-            </tr>
+            <?php
+              }
+              ?>
           </tbody>
         </table>
       </div>
