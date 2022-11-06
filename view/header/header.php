@@ -26,7 +26,12 @@
                   transform: translate3d(0px, 10.4px, 0px);
                 ">
             <div class="py-3 px-4">
-              <span class="block text-sm text-white">Mauricio Istúriz</span>
+              <span class="block text-sm text-white">
+                <?php
+                session_start();
+                echo $_SESSION['cedula'];
+                ?>
+              </span>
               <span class="block text-sm font-medium text-gray-400 truncate">odiolauni@gmail.com</span>
             </div>
             <ul class="py-1" aria-labelledby="user-menu-button">

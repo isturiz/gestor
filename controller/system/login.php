@@ -16,6 +16,7 @@ $conexion = mysqli_connect("localhost","root","","repositorio");
 
 $consulta = "SELECT * FROM personal WHERE cedula='$cedula' AND contraseña='$contraseña'";
 
+
 $resultado = mysqli_query($conexion, $consulta);
 
 $filas = mysqli_num_rows($resultado);
