@@ -37,7 +37,7 @@
               <td class="py-4 px-6"><?php echo $row['idCategoria'];?></td>
               <td class="py-4 px-6"><?php echo $row['peso'];?></td>
               <td class="py-4 px-6 text-right">
-                <a href="#" class="font-medium text-blue-500 hover:underline">Edit</a>
+                <a href="#" class="font-medium text-blue-500 hover:underline">delete</a>
               </td>
             </tr>
             <?php
