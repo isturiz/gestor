@@ -14,7 +14,7 @@ if ($size > 500000) {
 } else {
 
   if (move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)) {
-    header("location: ../../view/system/main.php");
+    header("location: ../../view/files/fileList.php");
   } else {
     echo "Hubo un error en la subida del archivo";
   }
