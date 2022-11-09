@@ -6,7 +6,7 @@ $directorio = "../../uploads/";
 
 $filePath = $directorio . basename($_FILES["file"]["name"]);
 
-$fileName = $_FILES["file"]["name"];
+$fileName = pathinfo($filePath, PATHINFO_FILENAME);
 $fileSize =  $_FILES["file"]["size"];
 $fileFormat = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
@@ -14,6 +14,9 @@ $fileFormat = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $filePath)) {
 
   $consulta = "INSERT INTO archivo (nombre, peso, formato) VALUES ('$fileName', '$fileSize', '$fileFormat')";
+  $resultado = mysqli_query($conexion, $consulta);
+
+  $consulta = "INSERT INTO ruta (direccion) VALUES ('$filePath')";
   $resultado = mysqli_query($conexion, $consulta);
 
   header("location: ../../view/files/fileList.php");

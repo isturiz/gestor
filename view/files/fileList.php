@@ -10,7 +10,7 @@
   <!-- ========== MAIN ========== -->
   <div class="flex-grow bg-gray-700">
     <main class="container">
-      <div class="overflow-x-auto relative w-full p-8 ">
+      <div class="overflow-x-auto  relative w-full p-8 ">
         <table class="w-full text-sm text-left text-gray-400">
           <thead class="text-xs uppercase bg-gray-700 text-gray-400">
             <tr>
@@ -23,26 +23,37 @@
           </thead>
           <tbody>
 
-              <?php
-              require_once '../../controller/files/fileList.php';
-              while($row = mysqli_fetch_assoc($files))
-              {
-              ?>
-
-            <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
-              <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap">
-                <?php echo $row['nombre'];?>
-              </th>
-              <td class="py-4 px-6"> <?php echo $row['formato'];?> </td>
-              <td class="py-4 px-6"><?php echo $row['idCategoria'];?></td>
-              <td class="py-4 px-6"><?php echo $row['peso'];?></td>
-              <td class="py-4 px-6 text-right">
-                <a href="#" class="font-medium text-blue-500 hover:underline">delete</a>
-              </td>
-            </tr>
             <?php
-              }
-              ?>
+            require_once '../../controller/files/fileList.php';
+            while ($row = mysqli_fetch_assoc($files)) {
+            ?>
+
+              <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
+                <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap">
+                  <?php echo $row['nombre']; ?>
+                </th>
+                <td class="py-4 px-6"> <?php echo $row['formato']; ?> </td>
+                <td class="py-4 px-6"><?php echo $row['idCategoria']; ?></td>
+                <td class="py-4 px-6">
+                  <?php
+
+                  $pesoFloat = floatval($row['peso']);
+
+                  if ($pesoFloat <= 1000000) {
+                    echo floor($pesoFloat / 1000) . ' KB';
+                  } else {
+                    echo floor($pesoFloat / 1000000) . ' MB';
+                  }
+
+                  ?>
+                </td>
+                <td class="py-4 px-6 text-right">
+                  <a href="#" class="font-medium text-blue-500 hover:underline">delete</a>
+                </td>
+              </tr>
+            <?php
+            }
+            ?>
           </tbody>
         </table>
       </div>
