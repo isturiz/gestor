@@ -19,7 +19,7 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $filePath)) {
   $consulta = "INSERT INTO ruta (direccion) VALUES ('$filePath')";
   $resultado = mysqli_query($conexion, $consulta);
 
-  header("location: ../../view/files/fileList.php");
+  header("location: ../../view/files/list.php");
 } else {
   echo "Hubo un error en la subida del archivo";
 }

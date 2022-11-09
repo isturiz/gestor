@@ -16,7 +16,7 @@ if(isset($_GET['id']))
     die("Query Failed.");
   }
 
-  header("location: ../../view/files/fileList.php");
+  header("location: ../../view/files/list.php");
 }
 
 ?>

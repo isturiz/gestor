@@ -24,7 +24,7 @@
           <tbody>
 
             <?php
-            require_once '../../controller/files/fileList.php';
+            require_once '../../controller/files/list.php';
             while ($row = mysqli_fetch_assoc($files)) {
             ?>
 

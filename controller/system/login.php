@@ -21,7 +21,7 @@ $filas = mysqli_num_rows($resultado);
 
 if($filas){
   
-  header("location: ../../view/files/fileList.php");
+  header("location: ../../view/files/list.php");
 
 }else{
   echo '<script type="text/JavaScript">console.log("login error")</script>';
