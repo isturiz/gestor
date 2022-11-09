@@ -48,7 +48,7 @@
                   ?>
                 </td>
                 <td class="py-4 px-6 text-right">
-                  <a href="#" class="font-medium text-blue-500 hover:underline">delete</a>
+                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo']?>" class="font-medium text-blue-500 hover:underline">delete</a>
                 </td>
               </tr>
             <?php
