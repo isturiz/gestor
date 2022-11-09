@@ -1,21 +1,22 @@
 <?php
 // var_dump($_FILES["file"]);
+require_once('../../model/conexion.php');
 
 $directorio = "../../uploads/";
 
-$archivo = $directorio . basename($_FILES["file"]["name"]);
+$filePath = $directorio . basename($_FILES["file"]["name"]);
 
-$tipoArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+$fileName = $_FILES["file"]["name"];
+$fileSize =  $_FILES["file"]["size"];
+$fileFormat = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
-$size = $_FILES["file"]["size"];
 
-if ($size > 500000) {
-  echo "El archivo tiene que ser menor a 500kb";
+if (move_uploaded_file($_FILES["file"]["tmp_name"], $filePath)) {
+
+  $consulta = "INSERT INTO archivo (nombre, peso, formato) VALUES ('$fileName', '$fileSize', '$fileFormat')";
+  $resultado = mysqli_query($conexion, $consulta);
+
+  header("location: ../../view/files/fileList.php");
 } else {
-
-  if (move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)) {
-    header("location: ../../view/files/fileList.php");
-  } else {
-    echo "Hubo un error en la subida del archivo";
-  }
+  echo "Hubo un error en la subida del archivo";
 }
