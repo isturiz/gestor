@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2022 at 12:07 AM
+-- Generation Time: Nov 09, 2022 at 07:51 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -40,8 +40,7 @@ CREATE TABLE `archivo` (
 --
 
 INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`) VALUES
-(1, 1, 'fileTest', '32KB', 'txt'),
-(2, 1, 'hack', '14KB', 'py');
+(32, 0, 'tesxt', '14', 'txt');
 
 -- --------------------------------------------------------
 
@@ -84,7 +83,7 @@ CREATE TABLE `formato` (
 --
 
 CREATE TABLE `nivel_usuario` (
-  `idnivel_usuario` int(11) NOT NULL,
+  `idNivelUsuario` int(11) NOT NULL,
   `nivel` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -101,14 +100,14 @@ CREATE TABLE `personal` (
   `telefono` varchar(45) NOT NULL,
   `correo` varchar(45) NOT NULL,
   `contraseña` varchar(45) NOT NULL,
-  `idnivel_usuario` int(11) NOT NULL
+  `idNivelUsuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `personal`
 --
 
-INSERT INTO `personal` (`cedula`, `nombre`, `apellido`, `telefono`, `correo`, `contraseña`, `idnivel_usuario`) VALUES
+INSERT INTO `personal` (`cedula`, `nombre`, `apellido`, `telefono`, `correo`, `contraseña`, `idNivelUsuario`) VALUES
 (1, 'admin', 'admin', '0500', 'admin@admin.com', '1', 1);
 
 -- --------------------------------------------------------
@@ -121,6 +120,16 @@ CREATE TABLE `ruta` (
   `idArchivo` int(11) NOT NULL,
   `direccion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ruta`
+--
+
+INSERT INTO `ruta` (`idArchivo`, `direccion`) VALUES
+(1, '../../uploads/test2.txt'),
+(2, '../../uploads/test2.txt'),
+(3, '../../uploads/tesxt.txt'),
+(4, '../../uploads/tesxt.txt');
 
 --
 -- Indexes for dumped tables
@@ -154,7 +163,7 @@ ALTER TABLE `formato`
 -- Indexes for table `nivel_usuario`
 --
 ALTER TABLE `nivel_usuario`
-  ADD PRIMARY KEY (`idnivel_usuario`);
+  ADD PRIMARY KEY (`idNivelUsuario`);
 
 --
 -- Indexes for table `personal`
@@ -167,6 +176,22 @@ ALTER TABLE `personal`
 --
 ALTER TABLE `ruta`
   ADD PRIMARY KEY (`idArchivo`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `archivo`
+--
+ALTER TABLE `archivo`
+  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `ruta`
+--
+ALTER TABLE `ruta`
+  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
