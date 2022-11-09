@@ -14,7 +14,7 @@
 				<div class="flex justify-center items-center w-full pb-8">
 					<label for="dropzone-file" class="flex flex-col justify-center items-center w-full h-64 bg-gray-700 rounded-lg ">
 						<div class="flex flex-col justify-center items-center pt-5 pb-6">
-							<form action="../../controller/uploadFile/uploadFile.php" method="POST" enctype="multipart/form-data">
+							<form action="../../controller/files/uploadFile.php" method="POST" enctype="multipart/form-data">
 								<input type="file" name="file">
 								<button type="submit">Upload</button>
 							</form>
