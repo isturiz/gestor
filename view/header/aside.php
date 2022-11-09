@@ -13,7 +13,7 @@
         </a>
       </li>
       <li>
-        <a href="../users/userRegistration.php" class="flex items-center p-2 text-base font-normal text-white hover:bg-gray-700">
+        <a href="../users/register.php" class="flex items-center p-2 text-base font-normal text-white hover:bg-gray-700">
           <span class="flex-1 ml-3 whitespace-nowrap">Users registration</span>
         </a>
       </li>
