@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 07:51 AM
+-- Generation Time: Nov 09, 2022 at 09:04 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -40,7 +40,8 @@ CREATE TABLE `archivo` (
 --
 
 INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`) VALUES
-(32, 0, 'tesxt', '14', 'txt');
+(32, 0, 'tesxt', '14', 'txt'),
+(33, 0, 'test2', '0', 'txt');
 
 -- --------------------------------------------------------
 
@@ -108,7 +109,8 @@ CREATE TABLE `personal` (
 --
 
 INSERT INTO `personal` (`cedula`, `nombre`, `apellido`, `telefono`, `correo`, `contraseña`, `idNivelUsuario`) VALUES
-(1, 'admin', 'admin', '0500', 'admin@admin.com', '1', 1);
+(1, 'admin', 'admin', '0500', 'admin@admin.com', '1', 1),
+(28286521, 'Mau', 'Istúriz', '4121511816', 'isturiz@gmail.com', 'admin', 1);
 
 -- --------------------------------------------------------
 
@@ -129,7 +131,8 @@ INSERT INTO `ruta` (`idArchivo`, `direccion`) VALUES
 (1, '../../uploads/test2.txt'),
 (2, '../../uploads/test2.txt'),
 (3, '../../uploads/tesxt.txt'),
-(4, '../../uploads/tesxt.txt');
+(4, '../../uploads/tesxt.txt'),
+(5, '../../uploads/test2.txt');
 
 --
 -- Indexes for dumped tables
@@ -185,13 +188,13 @@ ALTER TABLE `ruta`
 -- AUTO_INCREMENT for table `archivo`
 --
 ALTER TABLE `archivo`
-  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `ruta`
 --
 ALTER TABLE `ruta`
-  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
