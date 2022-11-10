@@ -46,12 +46,27 @@
                   }
 
                   ?>
+
+                  <!-- DESCARGAR ARCHIVOS -->
+                  <?php
+                  $sql = "SELECT nombre,formato FROM archivo";
+
+                  $result = mysqli_query($conexion, $sql);
+
+                  $rutaDescarga = "../../uploads/" . $row['nombre'] . "." . $row['formato'];
+                  $nombreArchivo = $row['nombre'] . "." . $row['formato'];
+
+
+                  ?>
                 </td>
                 <td class="py-4 px-6 text-right">
-                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo']?>" class="font-medium text-blue-500 hover:underline">delete</a>
+                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="font-medium text-blue-500 hover:underline">delete</a>
+
+                  <a href="<?php echo $rutaDescarga; ?>" download="<?php echo $nombreArchivo ?>" class="font-medium text-blue-500 hover:underline">download</a>
                 </td>
               </tr>
             <?php
+
             }
             ?>
           </tbody>
