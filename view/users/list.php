@@ -38,9 +38,9 @@
                 <td class="py-4 px-6"><?php echo $row['telefono']; ?></td>
                 <td class="py-4 px-6"><?php echo $row['correo']; ?></td>
                 <td class="py-4 px-6 text-right">
-                  <a href="" class="font-medium text-green-500 hover:underline">edit</a>
-                  <td>
-                  <a href="../../controller/users/delete.php?cedula=<?php echo $row['cedula']?>" class="font-medium text-blue-500 hover:underline">delete</a>
+                  <a href="../../view/users/edit.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-green-500 hover:underline">edit</a></td>
+                <td>
+                  <a href="../../controller/users/delete.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-blue-500 hover:underline">delete</a>
                 </td>
 
               </tr>

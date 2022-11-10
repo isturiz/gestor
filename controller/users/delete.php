@@ -2,11 +2,11 @@
 
 require_once('../../model/conexion.php');
 
-if(isset($_GET['cedula'])) 
+if(isset($_GET['identificationCard'])) 
 {
 
-  $user = $_GET['cedula'];
-  $query = "DELETE FROM personal WHERE cedula = '$user'";
+  $identificationCard = $_GET['identificationCard'];
+  $query = "DELETE FROM personal WHERE cedula = '$identificationCard'";
 
   $resultado = mysqli_query($conexion, $query);
   
