@@ -16,7 +16,7 @@
 						<div class="flex flex-col justify-center items-center pt-5 pb-6">
 							<form action="../../controller/files/upload.php" method="POST" enctype="multipart/form-data">
 								<input type="file" name="file">
-								<button type="submit">Upload</button>
+								<button type="submit">Subir</button>
 							</form>
 						</div>
 					</label>

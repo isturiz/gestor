@@ -14,11 +14,11 @@
         <table class="w-full text-sm text-left text-gray-400">
           <thead class="text-xs uppercase bg-gray-700 text-gray-400">
             <tr>
-              <th scope="col" class="py-3 px-6">File name</th>
-              <th scope="col" class="py-3 px-6">Format</th>
-              <th scope="col" class="py-3 px-6">Category</th>
-              <th scope="col" class="py-3 px-6">Size</th>
-              <th scope="col" class="py-3 px-6 text-right">Action</th>
+              <th scope="col" class="py-3 px-6">Nombre</th>
+              <th scope="col" class="py-3 px-6">Formato</th>
+              <th scope="col" class="py-3 px-6">Categoría</th>
+              <th scope="col" class="py-3 px-6">Tamaño</th>
+              <th scope="col" class="py-3 px-6 text-right">Acción</th>
             </tr>
           </thead>
           <tbody>
@@ -60,9 +60,9 @@
                   ?>
                 </td>
                 <td class="py-4 px-6 text-right">
-                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="font-medium text-blue-500 hover:underline">delete</a>
+                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="font-medium text-blue-500 hover:underline">eliminar</a>
 
-                  <a href="<?php echo $rutaDescarga; ?>" download="<?php echo $nombreArchivo ?>" class="font-medium text-blue-500 hover:underline">download</a>
+                  <a href="<?php echo $rutaDescarga; ?>" download="<?php echo $nombreArchivo ?>" class="font-medium text-blue-500 hover:underline">descargar</a>
                 </td>
               </tr>
             <?php

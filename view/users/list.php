@@ -19,7 +19,7 @@
               <th scope="col" class="py-3 px-6">Apellido</th>
               <th scope="col" class="py-3 px-6">Telefono</th>
               <th scope="col" class="py-3 px-6">Correo</th>
-              <th scope="col" class="py-3 px-6 text-right">Action</th>
+              <th scope="col" class="py-3 px-6 text-right">Acción</th>
             </tr>
           </thead>
           <tbody>
@@ -38,9 +38,9 @@
                 <td class="py-4 px-6"><?php echo $row['telefono']; ?></td>
                 <td class="py-4 px-6"><?php echo $row['correo']; ?></td>
                 <td class="py-4 px-6 text-right">
-                  <a href="../../view/users/edit.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-green-500 hover:underline">edit</a></td>
+                  <a href="../../view/users/edit.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-green-500 hover:underline">editar</a></td>
                 <td>
-                  <a href="../../controller/users/delete.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-blue-500 hover:underline">delete</a>
+                  <a href="../../controller/users/delete.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-blue-500 hover:underline">eliminar</a>
                 </td>
 
               </tr>
