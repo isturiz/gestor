@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 09:04 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Nov 30, 2022 at 07:12 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,16 +32,17 @@ CREATE TABLE `archivo` (
   `idCategoria` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `peso` varchar(45) NOT NULL,
-  `formato` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `formato` varchar(45) NOT NULL,
+  `ruta` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `archivo`
 --
 
-INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`) VALUES
-(32, 0, 'tesxt', '14', 'txt'),
-(33, 0, 'test2', '0', 'txt');
+INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`, `ruta`) VALUES
+(32, 0, 'tesxt', '14', 'txt', NULL),
+(33, 0, 'test2', '0', 'txt', NULL);
 
 -- --------------------------------------------------------
 
@@ -52,7 +53,7 @@ INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`) 
 CREATE TABLE `categoria` (
   `idCategoria` int(11) NOT NULL,
   `nombre_cat` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -64,7 +65,7 @@ CREATE TABLE `detalle_archivo` (
   `idArchivo` int(11) NOT NULL,
   `Personal_cedula` int(11) NOT NULL,
   `fecha` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -75,7 +76,7 @@ CREATE TABLE `detalle_archivo` (
 CREATE TABLE `formato` (
   `idFormato` int(11) NOT NULL,
   `formato_archivo` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,7 @@ CREATE TABLE `formato` (
 CREATE TABLE `nivel_usuario` (
   `idNivelUsuario` int(11) NOT NULL,
   `nivel` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,7 @@ CREATE TABLE `personal` (
   `correo` varchar(45) NOT NULL,
   `contraseña` varchar(45) NOT NULL,
   `idNivelUsuario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `personal`
@@ -111,28 +112,6 @@ CREATE TABLE `personal` (
 INSERT INTO `personal` (`cedula`, `nombre`, `apellido`, `telefono`, `correo`, `contraseña`, `idNivelUsuario`) VALUES
 (1, 'admin', 'admin', '0500', 'admin@admin.com', '1', 1),
 (28286521, 'Mau', 'Istúriz', '4121511816', 'isturiz@gmail.com', 'admin', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ruta`
---
-
-CREATE TABLE `ruta` (
-  `idArchivo` int(11) NOT NULL,
-  `direccion` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `ruta`
---
-
-INSERT INTO `ruta` (`idArchivo`, `direccion`) VALUES
-(1, '../../uploads/test2.txt'),
-(2, '../../uploads/test2.txt'),
-(3, '../../uploads/tesxt.txt'),
-(4, '../../uploads/tesxt.txt'),
-(5, '../../uploads/test2.txt');
 
 --
 -- Indexes for dumped tables
@@ -175,12 +154,6 @@ ALTER TABLE `personal`
   ADD PRIMARY KEY (`cedula`);
 
 --
--- Indexes for table `ruta`
---
-ALTER TABLE `ruta`
-  ADD PRIMARY KEY (`idArchivo`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -189,12 +162,6 @@ ALTER TABLE `ruta`
 --
 ALTER TABLE `archivo`
   MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `ruta`
---
-ALTER TABLE `ruta`
-  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
