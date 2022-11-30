@@ -13,10 +13,7 @@ $fileFormat = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $filePath)) {
 
-  $consulta = "INSERT INTO archivo (nombre, peso, formato) VALUES ('$fileName', '$fileSize', '$fileFormat')";
-  $resultado = mysqli_query($conexion, $consulta);
-
-  $consulta = "INSERT INTO ruta (direccion) VALUES ('$filePath')";
+  $consulta = "INSERT INTO archivo (nombre, peso, formato, ruta) VALUES ('$fileName', '$fileSize', '$fileFormat', '$filePath')";
   $resultado = mysqli_query($conexion, $consulta);
 
   header("location: ../../view/files/list.php");
