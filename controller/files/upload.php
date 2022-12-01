@@ -10,10 +10,13 @@ $fileName = pathinfo($filePath, PATHINFO_FILENAME);
 $fileSize =  $_FILES["file"]["size"];
 $fileFormat = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
+session_start();
+$cedulaUsuario = $_SESSION['cedula'];
+
 
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $filePath)) {
 
-  $consulta = "INSERT INTO archivo (nombre, peso, formato, ruta) VALUES ('$fileName', '$fileSize', '$fileFormat', '$filePath')";
+  $consulta = "INSERT INTO archivo (nombre, peso, formato, ruta, cedulaUsuario) VALUES ('$fileName', '$fileSize', '$fileFormat', '$filePath', '$cedulaUsuario')";
   $resultado = mysqli_query($conexion, $consulta);
 
   header("location: ../../view/files/list.php");

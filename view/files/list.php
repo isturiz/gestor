@@ -18,6 +18,7 @@
               <th scope="col" class="py-3 px-6">Formato</th>
               <th scope="col" class="py-3 px-6">Categoría</th>
               <th scope="col" class="py-3 px-6">Tamaño</th>
+              <th scope="col" class="py-3 px-6">Por</th>
               <th scope="col" class="py-3 px-6 text-right">Acción</th>
             </tr>
           </thead>
@@ -48,6 +49,8 @@
                   ?>
 
                 </td>
+                <td class="py-4 px-6"><?php echo $row['cedulaUsuario']; ?></td>
+                
                 <td class="py-4 px-6 text-right">
                   <!-- ELIMINAR ARCHIVOS -->
                   <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="font-medium text-blue-500 hover:underline">eliminar</a>
