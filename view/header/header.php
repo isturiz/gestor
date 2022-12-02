@@ -5,12 +5,6 @@
         <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white">SGT</span>
       </a>
-
-      <!-- buscador -->
-      <div class="">
-        <input type="search" class="px-3 py-1.5 text-base w-96 font-normal text-gray-700 bg-white border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Buscar archivo" />
-      </div>
-
       <!-- User menu -->
       <div class="">
         <div class="flex items-center md:order-2">
