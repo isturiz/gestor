@@ -38,9 +38,11 @@
                 <td class="py-4 px-6"><?php echo $row['telefono']; ?></td>
                 <td class="py-4 px-6"><?php echo $row['correo']; ?></td>
                 <td class="py-4 px-6 text-right">
-                  <a href="../../view/users/edit.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-green-500 hover:underline">editar</a></td>
+                  <!-- <a href="../../view/users/edit.php?identificationCard=<?php //echo $row['cedula']  ?>"-->
+                  <a href="#" data-modal-toggle="editUserModal" data-modal-id="<?php echo $row['cedula'] ?>" data-modal-name="<?php echo $row['nombre'] ?>" class="font-medium text-green-500 hover:underline">editar</a>
+                </td>
                 <td>
-                  <a href="../../controller/users/delete.php?identificationCard=<?php echo $row['cedula'] ?>" class="font-medium text-blue-500 hover:underline">eliminar</a>
+                  <a href="../../controller/users/delete.php?identificationCard=<?php echo $row['cedula'] ?>" data-modal-toggle="editUserModal" class="font-medium text-blue-500 hover:underline">eliminar</a>
                 </td>
 
               </tr>
@@ -49,6 +51,9 @@
             ?>
           </tbody>
         </table>
+
+        <?php require_once('editModal.php'); ?>
+
       </div>
     </main>
   </div>
