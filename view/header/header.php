@@ -26,7 +26,7 @@
                 echo $_SESSION['cedula'];
                 ?>
               </span>
-              <span class="block text-sm font-medium text-gray-400 truncate">odiolauni@gmail.com</span>
+              <span class="block text-sm font-medium text-gray-400 truncate">email@domain</span>
             </div>
             <ul class="py-1" aria-labelledby="user-menu-button">
               <li>

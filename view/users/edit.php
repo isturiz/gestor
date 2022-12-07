@@ -12,7 +12,7 @@
     <main class="container">
       <div class="overflow-x-auto  relative w-full p-8 ">
 
-        <!-- ===== user registrat ion ===== -->
+        <!-- ===== user registration ===== -->
         <!--, idNivelUsuario -->
         <?php require_once '../../controller/users/edit.php'; ?>
 
