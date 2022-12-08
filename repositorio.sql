@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2022 at 07:12 PM
+-- Generation Time: Dec 08, 2022 at 05:17 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -33,16 +33,18 @@ CREATE TABLE `archivo` (
   `nombre` varchar(45) NOT NULL,
   `peso` varchar(45) NOT NULL,
   `formato` varchar(45) NOT NULL,
-  `ruta` varchar(200) DEFAULT NULL
+  `ruta` varchar(200) DEFAULT NULL,
+  `cedulaUsuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `archivo`
 --
 
-INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`, `ruta`) VALUES
-(32, 0, 'tesxt', '14', 'txt', NULL),
-(33, 0, 'test2', '0', 'txt', NULL);
+INSERT INTO `archivo` (`idArchivo`, `idCategoria`, `nombre`, `peso`, `formato`, `ruta`, `cedulaUsuario`) VALUES
+(43, 0, 'tailwind.config', '111', 'js', '../../uploads/tailwind.config.js', 1),
+(45, 0, '2890258569_Hand_stand_on_Salto_Angel_in_Venez', '639264', 'png', '../../uploads/2890258569_Hand_stand_on_Salto_Angel_in_Venezuela__Realistic.png', 1),
+(48, 0, 'Logo', '127070', 'png', '../../uploads/Logo.png', 28286521);
 
 -- --------------------------------------------------------
 
@@ -65,17 +67,6 @@ CREATE TABLE `detalle_archivo` (
   `idArchivo` int(11) NOT NULL,
   `Personal_cedula` int(11) NOT NULL,
   `fecha` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `formato`
---
-
-CREATE TABLE `formato` (
-  `idFormato` int(11) NOT NULL,
-  `formato_archivo` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -110,7 +101,9 @@ CREATE TABLE `personal` (
 --
 
 INSERT INTO `personal` (`cedula`, `nombre`, `apellido`, `telefono`, `correo`, `contraseña`, `idNivelUsuario`) VALUES
-(1, 'admin', 'admin', '0500', 'admin@admin.com', '1', 1),
+(1, 'testeeee', 'test', 'test', 'test@test.com', 'test', 1),
+(2, '2', '2', '2', 'nombre@dominio.com', '', 2),
+(123, 'asdf', 'asdf', '123', 'asdf@asdf', 'asdf', 5),
 (28286521, 'Mau', 'Istúriz', '4121511816', 'isturiz@gmail.com', 'admin', 1);
 
 --
@@ -136,12 +129,6 @@ ALTER TABLE `detalle_archivo`
   ADD PRIMARY KEY (`idArchivo`,`Personal_cedula`);
 
 --
--- Indexes for table `formato`
---
-ALTER TABLE `formato`
-  ADD PRIMARY KEY (`idFormato`);
-
---
 -- Indexes for table `nivel_usuario`
 --
 ALTER TABLE `nivel_usuario`
@@ -161,7 +148,7 @@ ALTER TABLE `personal`
 -- AUTO_INCREMENT for table `archivo`
 --
 ALTER TABLE `archivo`
-  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `idArchivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
