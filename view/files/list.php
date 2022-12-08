@@ -60,13 +60,13 @@
 
           <div class="flex justify-between items-center">
 
-            <button type="button" data-modal-toggle="uploadModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-blue-800">Subir archivo</button> 
+            <button type="button" data-modal-toggle="uploadModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-blue-800">Subir archivo</button>
 
           </div>
 
         </div>
 
-        <table class="w-full text-sm text-left text-gray-400 tableToSearch" id="table-file">
+        <table class="w-full text-sm text-left text-gray-400" id="table-file">
           <thead class="text-xs uppercase bg-gray-700 text-gray-400">
             <tr>
               <th scope="col" class="py-3 px-6">Nombre</th>
@@ -108,11 +108,15 @@
 
                 <td class="py-4 px-6 text-right flex justify-between">
                   <!-- DESCARGAR ARCHIVOS -->
-                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="text-white-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></a>
-                  
+                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="text-white-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg></a>
+
                   <!-- ELIMINAR ARCHIVOS -->
-                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="text-red-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></a>
-                  
+                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="text-red-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg></a>
+
                 </td>
               </tr>
             <?php
@@ -127,7 +131,7 @@
         </table>
 
         <?php require_once('uploadModal.php'); ?>
-        
+
       </div>
     </main>
   </div>

@@ -38,7 +38,7 @@ function doSearch() {
   // mostramos las coincidencias
   const lastTR = tableReg.rows[tableReg.rows.length - 1];
   const td = lastTR.querySelector("td");
-  lastTR.classList.remove("hide", "red");
+  lastTR.classList.remove("hide", "text-red-500");
 
   if (searchText == "") {
     lastTR.classList.add("hide");
@@ -47,7 +47,7 @@ function doSearch() {
     td.innerHTML = "Se ha encontrado " + total + " coincidencia" + ((total > 1) ? "s" : "");
   }
   else {
-    lastTR.classList.add("red");
+    lastTR.classList.add("text-red-500");
     td.innerHTML = "No se han encontrado coincidencias";
   }
 }
