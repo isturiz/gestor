@@ -3,17 +3,17 @@
 
     <ul class="space-y-2">
       <li>
-        <a href="../files/list.php" class="flex items-center p-2 text-base font-normal text-white hover:text-blue-300">
+        <a href="../files/list.php" class="flex items-center p-2 text-base font-normal text-white hover:text-blue-500">
           <span class="flex-1 ml-3 whitespace-nowrap">Archivos</span>
         </a>
       </li>
       <li>
-        <a href="../users/register.php" class="flex items-center p-2 text-base font-normal text-white hover:text-blue-300">
+        <a href="../users/register.php" class="flex items-center p-2 text-base font-normal text-white hover:text-blue-500">
           <span class="flex-1 ml-3 whitespace-nowrap ">Registrar usuarios</span>
         </a>
       </li>
       <li>
-        <a href="../users/list.php" class="flex items-center p-2 text-base font-normal text-white hover:text-blue-300">
+        <a href="../users/list.php" class="flex items-center p-2 text-base font-normal text-white hover:text-blue-500">
           <span class="flex-1 ml-3 whitespace-nowrap">Usuarios</span>
         </a>
       </li>

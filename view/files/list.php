@@ -15,11 +15,7 @@
         <!-- FILTER AND SEARCH -->
         <div class="flex justify-between items-center pb-4">
 
-          <div class="flex justify-between items-center">
-
-            <button type="button" data-modal-toggle="defaultModal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Subir archivo</button> 
-
-          </div>
+          
 
           <div class="flex justify-between items-center gap-2">
 
@@ -57,7 +53,7 @@
             <label for="table-search" class="sr-only">Search</label>
             <div class="relative">
               <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-5 h-5 text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                 </svg>
               </div>
@@ -65,10 +61,15 @@
             </div>
           </div>
 
+          <div class="flex justify-between items-center">
+
+            <button type="button" data-modal-toggle="defaultModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-blue-800">Subir archivo</button> 
+
+          </div>
 
         </div>
 
-        <table class="w-full text-sm text-left text-gray-400" id="table-file">
+        <table class="w-full text-sm text-left text-gray-400 " id="table-file">
           <thead class="text-xs uppercase bg-gray-700 text-gray-400">
             <tr>
               <th scope="col" class="py-3 px-6">Nombre</th>
@@ -109,11 +110,11 @@
                 <td class="py-4 px-6"><?php echo $row['cedulaUsuario']; ?></td>
 
                 <td class="py-4 px-6 text-right">
-                  <!-- ELIMINAR ARCHIVOS -->
-                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="font-medium text-blue-500 hover:underline">eliminar</a>
-
                   <!-- DESCARGAR ARCHIVOS -->
-                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="font-medium text-blue-500 hover:underline">descargar</a>
+                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="font-medium text-white-500 hover:underline">descargar</a>
+                  
+                  <!-- ELIMINAR ARCHIVOS -->
+                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="font-medium text-red-500 hover:underline">eliminar</a>
                 </td>
               </tr>
             <?php
