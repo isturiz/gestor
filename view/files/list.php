@@ -14,9 +14,6 @@
 
         <!-- FILTER AND SEARCH -->
         <div class="flex justify-between items-center pb-4">
-
-          
-
           <div class="flex justify-between items-center gap-2">
 
             <div>
@@ -57,27 +54,27 @@
                   <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                 </svg>
               </div>
-              <input type="text" id="table-search" onkeyup="doSearch()" class="block p-2 pl-10 w-80 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar">
+              <input type="text" id="table-search" onkeyup="doSearch()" class="textToSearch block p-2 pl-10 w-80 text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Buscar">
             </div>
           </div>
 
           <div class="flex justify-between items-center">
 
-            <button type="button" data-modal-toggle="defaultModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-blue-800">Subir archivo</button> 
+            <button type="button" data-modal-toggle="uploadModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-blue-800">Subir archivo</button> 
 
           </div>
 
         </div>
 
-        <table class="w-full text-sm text-left text-gray-400 " id="table-file">
+        <table class="w-full text-sm text-left text-gray-400 tableToSearch" id="table-file">
           <thead class="text-xs uppercase bg-gray-700 text-gray-400">
             <tr>
               <th scope="col" class="py-3 px-6">Nombre</th>
               <th scope="col" class="py-3 px-6">Formato</th>
               <th scope="col" class="py-3 px-6">Categoría</th>
               <th scope="col" class="py-3 px-6">Tamaño</th>
-              <th scope="col" class="py-3 px-6">Por</th>
-              <th scope="col" class="py-3 px-6 text-right">Acción</th>
+              <th scope="col" class="py-3 px-6">Subido por</th>
+              <th scope="col" class="py-3 px-6 text-center">Acción</th>
             </tr>
           </thead>
           <tbody>
@@ -109,12 +106,13 @@
                 </td>
                 <td class="py-4 px-6"><?php echo $row['cedulaUsuario']; ?></td>
 
-                <td class="py-4 px-6 text-right">
+                <td class="py-4 px-6 text-right flex justify-between">
                   <!-- DESCARGAR ARCHIVOS -->
-                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="font-medium text-white-500 hover:underline">descargar</a>
+                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="text-white-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></a>
                   
                   <!-- ELIMINAR ARCHIVOS -->
-                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="font-medium text-red-500 hover:underline">eliminar</a>
+                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="text-red-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></a>
+                  
                 </td>
               </tr>
             <?php

@@ -31,7 +31,7 @@ if (!$resultado) {
   die("Query Failed.");
 }
 
-header("location: ../../view/files/list.php");
+header("location: ../../view/users/list.php");
 
 ?>
 
