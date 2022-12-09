@@ -6,7 +6,7 @@
     <form action="../../controller/files/upload.php" method="POST" enctype="multipart/form-data" class="relative rounded-lg shadow bg-gray-700">
       <!-- Modal header -->
       <div class="flex justify-between items-start p-4 rounded-t border-b border-gray-600">
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+        <h3 class="text-xl font-semibold text-gray-900  text-white">
           Subir archivo
         </h3>
         <button type="button" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white" data-modal-toggle="uploadModal">

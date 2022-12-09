@@ -17,7 +17,7 @@
           <div class="flex justify-between items-center gap-2">
 
             <div>
-              <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio" class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+              <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio" class="inline-flex items-center border focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1.5  bg-gray-800  text-white  border-gray-600  hover:bg-gray-700  hover:border-gray-600  focus:ring-gray-700" type="button">
                 <svg class="mr-2 w-4 h-4 text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
                 </svg>
@@ -27,18 +27,18 @@
                 </svg>
               </button>
               <!-- Dropdown menu -->
-              <div id="dropdownRadio" class="hidden z-10 w-48 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(522.5px, 3847.5px, 0px);">
-                <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownRadioButton">
+              <div id="dropdownRadio" class="hidden z-10 w-48 rounded divide-y shadow  bg-gray-700  divide-gray-600" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(522.5px, 3847.5px, 0px);">
+                <ul class="p-3 space-y-1 text-sm text-gray-200" aria-labelledby="dropdownRadioButton">
                   <li>
-                    <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                      <input id="filter-radio-example-1" type="radio" value="" name="filter-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                      <label for="filter-radio-example-1" class="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Últimos 7 días</label>
+                    <div class="flex items-center p-2 rounded hover:bg-gray-600">
+                      <input id="filter-radio-example-1" type="radio" value="" name="filter-radio" class="w-4 h-4 text-blue-600 focus:ring-blue-600  ring-offset-gray-800 focus:ring-2  bg-gray-700  border-gray-600">
+                      <label for="filter-radio-example-1" class="ml-2 w-full text-sm font-medium rounded  text-gray-300">Últimos 7 días</label>
                     </div>
                   </li>
                   <li>
-                    <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                      <input checked="" id="filter-radio-example-2" type="radio" value="" name="filter-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                      <label for="filter-radio-example-2" class="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Últimos 30 días</label>
+                    <div class="flex items-center p-2 rounded hover:bg-gray-600">
+                      <input checked="" id="filter-radio-example-2" type="radio" value="" name="filter-radio" class="w-4 h-4 text-blue-600 focus:ring-blue-600  ring-offset-gray-800 focus:ring-2  bg-gray-700  border-gray-600">
+                      <label for="filter-radio-example-2" class="ml-2 w-full text-sm font-medium rounded  text-gray-300">Últimos 30 días</label>
                     </div>
                   </li>
 
@@ -104,18 +104,28 @@
                   ?>
 
                 </td>
-                <td class="py-4 px-6"><?php echo $row['cedulaUsuario']; ?></td>
+                <td class="py-4 px-6 "><?php echo $row['cedulaUsuario']; ?></td>
 
                 <td class="py-4 px-6 text-right flex justify-between">
                   <!-- DESCARGAR ARCHIVOS -->
-                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="text-white-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg></a>
+                  <a href="<?php echo $row['ruta']; ?>" download="<?php echo $row['nombre'] . "." . $row['formato'] ?>" class="text-white-500 ">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                    </svg>
+                  </a>
 
                   <!-- ELIMINAR ARCHIVOS -->
-                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="text-red-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg></a>
+                  <!-- <a href="../../controller/files/delete.php?id=<?php //echo $row['idArchivo'] 
+                                                                      ?>" class="text-red-500" data-modal-toggle="deleteModal"> -->
+                  <a href="../../controller/files/delete.php?id=<?php echo $row['idArchivo'] ?>" class="text-red-500" data-modal-toggle="deleteModal">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                    </svg>
+                  </a>
+
+                  <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  bg-blue-600  hover:bg-blue-700  focus:ring-blue-800" type="button" data-modal-toggle="deleteModal">
+                    Toggle modal
+                  </button>
 
                 </td>
               </tr>
@@ -131,6 +141,8 @@
         </table>
 
         <?php require_once('uploadModal.php'); ?>
+        <?php require_once('deleteModal.php'); ?>
+
 
       </div>
     </main>
