@@ -15,6 +15,17 @@
         <!-- FILTER AND SEARCH -->
         <div class="flex justify-between items-center pb-4">
           <div class="flex justify-between items-center gap-2">
+            
+            <!-- Search -->
+            <label for="table-search" class="sr-only">Search</label>
+            <div class="relative">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg class="w-5 h-5 text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <input type="text" id="table-search" onkeyup="doSearch()" class="textToSearch block p-2 pl-10 w-80 text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Buscar">
+            </div>
 
             <div>
               <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio" class="inline-flex items-center border focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-3 py-1.5  bg-gray-800  text-white  border-gray-600  hover:bg-gray-700  hover:border-gray-600  focus:ring-gray-700" type="button">
@@ -46,16 +57,7 @@
               </div>
             </div>
 
-            <!-- Search -->
-            <label for="table-search" class="sr-only">Search</label>
-            <div class="relative">
-              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg class="w-5 h-5 text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
-                </svg>
-              </div>
-              <input type="text" id="table-search" onkeyup="doSearch()" class="textToSearch block p-2 pl-10 w-80 text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Buscar">
-            </div>
+
           </div>
 
           <div class="flex justify-between items-center">
@@ -116,10 +118,10 @@
 
                   <!-- ELIMINAR ARCHIVOS -->
                   <!-- <a href="../../controller/files/delete.php?id=<?php //echo $row['idArchivo'] 
-                                                                      ?>" class="text-red-500" data-modal-toggle="deleteModal"> -->
+                                                                      ?>" class="text-red-500" data-modal-toggle="deleteAlert"> -->
 
-                  <button class="text-red-500"  type="button" data-modal-toggle="deleteModal" targetEl="" onclick="deleteArchive('<?php echo($row['idArchivo']); ?>')">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <button class="text-red-500" type="button" data-modal-toggle="deleteAlert" targetEl="" onclick="deleteFile('<?php echo ($row['idArchivo']); ?>')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                     </svg>
                   </button>
@@ -138,14 +140,14 @@
         </table>
 
         <?php require_once('uploadModal.php'); ?>
-        <?php require_once('deleteModal.php'); ?>
+        <?php require_once('../complementary/deleteAlert.php'); ?>
 
 
       </div>
     </main>
   </div>
 
-  <script src="../../search.js"></script>
-  <script src="deleteModal.js"></script>
+  <script src="../../js/search.js"></script>
+  <script src="../../js/deleteAlert.js"></script>
 
   <?php require_once('../../view/header/htmlEnd.php'); ?>

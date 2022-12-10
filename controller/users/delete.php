@@ -2,10 +2,10 @@
 
 require_once('../../model/conexion.php');
 
-if(isset($_GET['identificationCard'])) 
+if(isset($_GET['id'])) 
 {
 
-  $identificationCard = $_GET['identificationCard'];
+  $identificationCard = $_GET['id'];
   $query = "DELETE FROM personal WHERE cedula = '$identificationCard'";
 
   $resultado = mysqli_query($conexion, $query);

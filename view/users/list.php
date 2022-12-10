@@ -30,7 +30,7 @@
           </div>
 
 
-          <button type="button" data-modal-toggle="newUserModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Nuevo usuario</button>
+          <button type="button" data-modal-toggle="newUser" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Nuevo usuario</button>
 
 
         </div>
@@ -71,9 +71,13 @@
                   <!-- <a href="#" data-modal-toggle="editUserModal" data-modal-id="<?php //echo $row['cedula'] 
                                                                                     ?>" data-modal-name="<?php //echo $row['nombre'] 
                                                                                                           ?>" class="font-medium text-white-500 hover:underline">editar</a> -->
-                  <a href="../../controller/users/delete.php?identificationCard=<?php echo $row['cedula'] ?>" data-modal-toggle="editUserModal" class="text-red-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                 
+
+                  <button class="text-red-500" type="button" data-modal-toggle="deleteAlert" targetEl="" onclick="deleteUser('<?php echo ($row['cedula']); ?>')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
-                    </svg></a>
+                    </svg>
+                  </button>
                 </td>
               </tr>
             <?php
@@ -87,11 +91,14 @@
         </table>
 
         <?php require_once('editModal.php'); ?>
-        <?php require_once('newUserModal.php'); ?>
+        <?php require_once('newUser.php'); ?>
+        <?php require_once('../complementary/deleteAlert.php'); ?>
+
 
       </div>
     </main>
   </div>
-  <script src="../../search.js"></script>
+  <script src="../../js/search.js"></script>
+  <script src="../../js/deleteAlert.js"></script>
 
   <?php require_once('../../view/header/htmlEnd.php'); ?>
