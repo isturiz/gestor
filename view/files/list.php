@@ -15,7 +15,7 @@
         <!-- FILTER AND SEARCH -->
         <div class="flex justify-between items-center pb-4">
           <div class="flex justify-between items-center gap-2">
-            
+
             <!-- Search -->
             <label for="table-search" class="sr-only">Search</label>
             <div class="relative">
@@ -139,7 +139,7 @@
           </tbody>
         </table>
 
-        <?php require_once('uploadModal.php'); ?>
+        <?php require_once('upload.php'); ?>
         <?php require_once('../complementary/deleteAlert.php'); ?>
 
 

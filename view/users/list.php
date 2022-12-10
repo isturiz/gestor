@@ -91,7 +91,7 @@
         </table>
 
         <?php require_once('editModal.php'); ?>
-        <?php require_once('newUser.php'); ?>
+        <?php require_once('new.php'); ?>
         <?php require_once('../complementary/deleteAlert.php'); ?>
 
 
