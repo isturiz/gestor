@@ -2,7 +2,6 @@ function doSearch() {
   const tableReg = document.getElementById('table-file');
   const searchText = document.getElementById('table-search').value.toLowerCase();
   let total = 0;
-  console.log(searchText);
 
   // Recorremos todas las filas con contenido de la tabla
   for (let i = 1; i < tableReg.rows.length; i++) {
@@ -42,6 +41,7 @@ function doSearch() {
 
   if (searchText == "") {
     lastTR.classList.add("hide");
+    td.innerHTML = "";
   }
   else if (total) {
     td.innerHTML = "Se ha encontrado " + total + " coincidencia" + ((total > 1) ? "s" : "");
