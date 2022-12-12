@@ -29,23 +29,23 @@ if (isset($_GET['identificationCard'])) {
   }
 }
 
-if (isset($_POST['edit'])) {
+if (isset($_GET['id'])) {
 
-  $identificationCard = $_POST['identificationCard'];
+  $identificationCard = $_GET['id'];
 
-  //$email              = $_POST['email'];
-  //$password           = $_POST['password'];
+  $email              = $_POST['email'];
+  $password           = $_POST['password'];
   $firstName          = $_POST['firstName'];
-  //$lastName           = $_POST['lastName'];
-  //$identificationCard = $_POST['identificationCard'];
-  //$phone              = $_POST['phone'];
-  //$userLevel          = $_POST['userLevel'];
+  $lastName           = $_POST['lastName'];
+  $identificationCard = $_POST['identificationCard'];
+  $phone              = $_POST['phone'];
+  $userLevel          = $_POST['userLevel'];
 
-  var_dump($firstName, $identificationCard);
+  //var_dump($firstName, $identificationCard);
 
   $query = "UPDATE personal set nombre = '$firstName' WHERE cedula = '$identificationCard'";
 
-  //$query = "UPDATE personal set cedula = '$identificationCard', nombre = '$firstName', apellido = '$lastName', telefono = '$phone', correo = '$email', contraseña = '$password', idNivelUsuario = '$userLevel' WHERE cedula = $identificationCard";
+  $query = "UPDATE personal set cedula = '$identificationCard', nombre = '$firstName', apellido = '$lastName', telefono = '$phone', correo = '$email', contraseña = '$password', idNivelUsuario = '$userLevel' WHERE cedula = $identificationCard";
   mysqli_query($conexion, $query);
 
   header("location: ../../view/users/list.php");

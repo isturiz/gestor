@@ -3,7 +3,7 @@
   <div class="relative w-full max-w-2xl h-full md:h-auto">
   
     <!-- Modal content -->
-    <form action="../../controller/users/edit.php" method="POST" class="relative rounded-lg shadow  bg-gray-700">
+    <div class="relative rounded-lg shadow bg-gray-700">
       <!-- Modal header -->
       <div class="flex justify-between items-start p-4 rounded-t border-b  border-gray-600">
         <h3 class="text-xl font-semibold text-white">
@@ -19,37 +19,37 @@
       <div class="p-6 space-y-6">
         <div class="grid grid-cols-6 gap-6">
         <div class="col-span-6 sm:col-span-3">
-            <label for="email" class="block mb-2 text-sm font-medium text-white">Correo electrónico</label>
-            <input type="email" name="email" id="email" class="shadow-sm border text-sm rounded-lg block w-full p-2.5  bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="nombre@dominio" value="">
+            <label for="emailEdit" class="block mb-2 text-sm font-medium text-white">Correo electrónico</label>
+            <input type="email" name="email" id="emailEdit" class="shadow-sm border text-sm rounded-lg block w-full p-2.5  bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="nombre@dominio" value="">
           </div>
 
           <div class="col-span-6 sm:col-span-3">
-            <label for="password" class="block mb-2 text-sm font-medium  text-white">Contraseña</label>
-            <input type="password" name="password" id="password" class="shadow-sm border text-sm rounded-lg block w-full p-2.5  bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="********" value="">
+            <label for="passwordEdit" class="block mb-2 text-sm font-medium  text-white">Contraseña</label>
+            <input type="password" name="password" id="passwordEdit" class="shadow-sm border text-sm rounded-lg block w-full p-2.5  bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="********" value="">
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <label for="userLevel" class="block mb-2 text-sm font-medium    text-white">Nombre</label>
-            <input type="text" name="firstName" id="firstName" class="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="Mauricio" value="">
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label for="lastName" class="block mb-2 text-sm font-medium    text-white">Apellido</label>
-            <input type="text" name="lastName" id="lastName" class="shadow-sm border text-sm rounded-lg   block w-full p-2.5 bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="Istúriz" value="">
+            <label for="firstNameEdit" class="block mb-2 text-sm font-medium    text-white">Nombre</label>
+            <input type="text" name="firstName" id="firstNameEdit" class="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="Mauricio" value="">
           </div>
 
           <div class="col-span-6 sm:col-span-3">
-            <label for="identificationCard" class="block mb-2 text-sm font-medium text-white">Cédula</label>
-            <input type="text" name="identificationCard" id="identificationCard" class="shadow-sm border text-sm rounded-lg block w-full p-2.5  bg-gray-600  border-gray-500 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="123456678" value="">
+            <label for="lastNameEdit" class="block mb-2 text-sm font-medium    text-white">Apellido</label>
+            <input type="text" name="lastName" id="lastNameEdit" class="shadow-sm border text-sm rounded-lg   block w-full p-2.5 bg-gray-600  border-gray-500  placeholder-gray-400  text-white  focus:ring-blue-500  focus:border-blue-500" placeholder="Istúriz" value="">
           </div>
 
           <div class="col-span-6 sm:col-span-3">
-            <label for="phone" class="block mb-2 text-sm font-medium    text-white">Teléfono</label>
-            <input type="text" name="phone" id="phone" class="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500  placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="0555000" value="">
+            <label for="identificationCardEdit" class="block mb-2 text-sm font-medium text-white">Cédula</label>
+            <input type="text" name="identificationCard" id="identificationCardEdit" class="shadow-sm border text-sm rounded-lg block w-full p-2.5  bg-gray-600  border-gray-500 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="123456678" value="">
           </div>
 
           <div class="col-span-6 sm:col-span-3">
-            <label for="userLevel" class="block mb-2 text-sm font-medium text-white">Nivel de usuario</label>
-            <input type="text" name="userLevel" id="userLevel" class="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-600  border-gray-500 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Boss" value="">
+            <label for="phoneEdit" class="block mb-2 text-sm font-medium    text-white">Teléfono</label>
+            <input type="text" name="phone" id="phoneEdit" class="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-gray-500  placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="0555000" value="">
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <label for="userLevelEdit" class="block mb-2 text-sm font-medium text-white">Nivel de usuario</label>
+            <input type="text" name="userLevel" id="userLevelEdit" class="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-600  border-gray-500 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Boss" value="">
           </div>
 
         </div>
@@ -58,6 +58,13 @@
       <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-600">
         <button type="submit" name="edit" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center  bg-blue-600  hover:bg-blue-700  focus:ring-blue-800">Editar</button>
       </div>
-    </form>
+
+      <a href="javascript::void(0);" data-modal-toggle="deleteAlert" id="btnEditUser" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">Confirmar
+        </a>
+
+        <input type="text" id="inputPrueba">
+
+        <div id="divPrueba"></div>
+    </div>
   </div>
 </div>
