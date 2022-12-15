@@ -63,27 +63,31 @@
                 <td class="py-4 px-6"><?php echo $row['correo']; ?></td>
                 <td class="py-4 px-6 text-right flex justify-between">
 
-                <!-- Old edit -->
-                  <a href="../../view/users/edit.php?identificationCard=<?php echo $row['cedula'] ?>" class="text-white-500">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
-                    </svg>
-                  </a>
-
                   <!-- Edit nuevo: oficial -->
-                  <button class="text-lime-500" type="button" data-modal-toggle="editUserModal" id="editButton" data-test-nombre="<?php echo $row['nombre']; ?>" onclick="editUser('<?php echo ($row['cedula'])?>')">
+                  <button 
+                    class="text-white-500 editButton" 
+                    type="button" 
+                    
+                    data-modal-toggle="editUserModal" 
+
+                    onclick="editUser(
+                      '<?php echo ($row['cedula'])?>',
+                      '<?php echo ($row['nombre'])?>',
+                      '<?php echo ($row['apellido'])?>',
+                      '<?php echo ($row['telefono'])?>',
+                      '<?php echo ($row['correo'])?>',
+                      '<?php echo ($row['contraseña'])?>',
+                      '<?php echo ($row['idNivelUsuario'])?>'
+
+                      )">
+
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
                     </svg>
                   </button>
 
-                  <!-- El modal de editar está hecho pero no precarga los datos, por lo que no está listo para implementar -->
-                  <!-- <a href="#" data-modal-toggle="editUserModal" data-modal-id="<?php //echo $row['cedula'] 
-                                                                                    ?>" data-modal-name="<?php //echo $row['nombre'] 
-                                                                                                          ?>" class="font-medium text-white-500 hover:underline">editar</a> -->
-
-
-                  <button class="text-red-500" type="button" data-modal-toggle="deleteAlert" targetEl="" onclick="deleteUser('<?php echo ($row['cedula']); ?>')">
+                  <button class="text-red-500" type="button" data-modal-toggle="deleteAlert" targetEl="" 
+                  onclick="deleteUser('<?php echo ($row['cedula'])?>')">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                     </svg>
@@ -100,7 +104,7 @@
           </tbody>
         </table>
 
-        <?php require_once('editModal.php'); ?>
+        <?php require_once('edit.php'); ?>
         <?php require_once('new.php'); ?>
         <?php require_once('../complementary/deleteAlert.php'); ?>
 

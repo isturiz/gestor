@@ -2,18 +2,23 @@
 
 require_once('../../model/conexion.php');
 
-if (isset($_GET['id'])) {
-
-$identificationCard = $_GET['id'];
-$firstName          = $_GET['nombre'];
-
-var_dump($identificationCard, $firstName);
+// var_dump($_POST['email']);
 
 
-//var_dump($firstName, $identificationCard);
 
-//$query = "UPDATE personal set nombre = '$firstName' WHERE cedula = $identificationCard";
-//mysqli_query($conexion, $query);
 
-//header("location: ../../view/users/list.php");
-}
+  $identificationCard = $_GET['id'];
+
+  $email              = $_POST['email'];
+  $password           = $_POST['password'];
+  $firstName          = $_POST['firstName'];
+  $lastName           = $_POST['lastName'];
+  $identificationCard = $_POST['identificationCard'];
+  $phone              = $_POST['phone'];
+  $userLevel          = $_POST['userLevel'];
+
+  $query = "UPDATE personal set cedula = '$identificationCard', nombre = '$firstName', apellido = '$lastName', telefono = '$phone', correo = '$email', contraseña = '$password', idNivelUsuario = '$userLevel' WHERE cedula = $identificationCard";
+  mysqli_query($conexion, $query);
+  header("location: ../../view/users/list.php");
+
+

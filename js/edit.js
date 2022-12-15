@@ -1,15 +1,17 @@
-function editUser(id, nombre) {
-  let element = document.querySelector('#btnEditUser');
-  element.setAttribute('href', '../../controller/users/test.php?id='+id);
+function editUser(id, nombre, apellido, telefono, correo, contraseña, nivelUsuario) {
+  let nombreInput = document.querySelector('#firstNameEdit')
+  let apellidoInput = document.querySelector('#lastNameEdit')
+  let telefonoInput = document.querySelector('#phoneEdit')
+  let cedulaInput = document.querySelector('#identificationCardEdit')
+  let correoInput = document.querySelector('#emailEdit')
+  let contraseñaInput = document.querySelector('#passwordEdit')
+  let nivelInput = document.querySelector('#userLevelEdit')
 
-  let divPrueba = document.querySelector('#divPrueba')
-  let inputPrueba = document.querySelector('#inputPrueba')
-  let nombree = document.querySelector('#firstNameEdit') 
-
-  let btn = document.querySelector('#editButton')
-  let nombreAlt = btn.getAttribute('data-test-nombre')
-
-  nombree.value = nombreAlt
-
-  inputPrueba.value = id
+  nombreInput.value = nombre
+  apellidoInput.value = apellido
+  telefonoInput.value = telefono
+  cedulaInput.value = id
+  correoInput.value = correo
+  contraseñaInput.value = contraseña
+  nivelInput.value = nivelUsuario
 }
