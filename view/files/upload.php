@@ -19,13 +19,11 @@
       <!-- Modal body -->
       <div class="p-6 space-y-6 text-white ">
         <input type="file" name="file">
-
-        <label for="lang" style="padding-left: 50px;">Categoria</label>
-
-        <!-- Modal footer -->
-        <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-600">
-          <button type="submit" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">Subir</button>
-        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-600">
+        <button onclick="showAlert()" type="submit" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">Subir</button>
+      </div>
     </form>
   </div>
 </div>

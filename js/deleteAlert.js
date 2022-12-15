@@ -1,7 +1,7 @@
 let show = localStorage.getItem('showLabel');
 
 if (show === 'true') {
-  label = document.getElementById('changeAlert');
+  label = document.querySelector('.changeAlert');
   label.classList.remove('hidden');
 }
 
