@@ -30,7 +30,7 @@
           </div>
 
 
-          <button type="button" data-modal-toggle="newUser" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Nuevo usuario</button>
+          <button type="button" data-modal-toggle="newUser" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-green-800">Nuevo usuario</button>
 
 
         </div>

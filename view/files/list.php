@@ -62,7 +62,7 @@
 
           <div class="flex justify-between items-center">
 
-            <button type="button" data-modal-toggle="uploadModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-blue-800">Subir archivo</button>
+            <button type="button" data-modal-toggle="uploadModal" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-green-800">Subir archivo</button>
 
           </div>
 
