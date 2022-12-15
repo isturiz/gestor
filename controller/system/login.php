@@ -5,10 +5,6 @@ require_once('../../model/conexion.php');
 $cedula = $_POST['cedula'];
 $contraseña = $_POST['clave'];
 
-
-echo '<script type="text/JavaScript">console.log("work database conection")</script>';
-
-
 session_start();
 $_SESSION['cedula'] = $cedula;
 
@@ -24,9 +20,8 @@ if($filas){
   header("location: ../../view/files/list.php");
 
 }else{
-  echo '<script type="text/JavaScript">console.log("login error")</script>';
-
-  // header("location: ../../Vista/Sistema/error_autenticacion.php");
+  
+  header("location: ../../view/system/alertFail.php");
 }
 
 mysqli_free_result($resultado);

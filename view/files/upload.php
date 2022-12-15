@@ -2,7 +2,7 @@
 <div id="uploadModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center p-4 w-full md:inset-0 h-modal md:h-full">
   <div class="relative w-full max-w-2xl h-full md:h-auto">
 
-    <!-- Modal content -->
+    <!-- Modal content -->e
     <form action="../../controller/files/upload.php" method="POST" enctype="multipart/form-data" class="relative rounded-lg shadow bg-gray-700">
       <!-- Modal header -->
       <div class="flex justify-between items-start p-4 rounded-t border-b border-gray-600">
@@ -19,11 +19,26 @@
       <!-- Modal body -->
       <div class="p-6 space-y-6 text-white ">
         <input type="file" name="file">
-      </div>
-      <!-- Modal footer -->
-      <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-600">
-        <button type="submit" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">Subir</button>
-      </div>
+
+        <label for="lang" style="padding-left: 50px;">Categoria</label>
+
+
+
+        <select name="categorias[]" id="lang" style="color: grey; height: 35px;">
+          <?php
+          require_once '../../controller/files/list.php';
+          while ($ro = mysqli_fetch_array($categories)) {
+          ?>
+            <option value="categories"><?php echo $ro['nombre_cat'] ?></option>
+          <?php
+
+          }
+          ?>
+        </select>
+        <!-- Modal footer -->
+        <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-600">
+          <button type="submit" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">Subir</button>
+        </div>
     </form>
   </div>
 </div>
