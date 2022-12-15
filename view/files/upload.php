@@ -22,19 +22,6 @@
 
         <label for="lang" style="padding-left: 50px;">Categoria</label>
 
-
-
-        <select name="categorias[]" id="lang" style="color: grey; height: 35px;">
-          <?php
-          require_once '../../controller/files/list.php';
-          while ($ro = mysqli_fetch_array($categories)) {
-          ?>
-            <option value="categories"><?php echo $ro['nombre_cat'] ?></option>
-          <?php
-
-          }
-          ?>
-        </select>
         <!-- Modal footer -->
         <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-600">
           <button type="submit" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">Subir</button>
