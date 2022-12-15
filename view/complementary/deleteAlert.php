@@ -11,9 +11,9 @@
         <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14  text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-        <h3 class="mb-5 text-lg font-normal text-gray-400">¿Desea eliminar este archivo?</h3>
+        <h3  class="mb-5 text-lg font-normal text-gray-400">¿Desea eliminar este archivo?</h3>
 
-        <a href="javascript::void(0);" data-modal-toggle="deleteAlert" id="btnDelete" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">Confirmar
+        <a onclick="showAlert()" href="javascript::void(0);" data-modal-toggle="deleteAlert" id="btnDelete" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">Confirmar
         </a>
 
         <button data-modal-toggle="deleteAlert" type="button" class="focus:ring-4 focus:outline-none rounded-lg border text-sm font-medium px-5 py-2.5 focus:z-10  bg-gray-700  text-gray-300  border-gray-500  hover:text-white  hover:bg-gray-600  focus:ring-gray-600">No, cancelar</button>

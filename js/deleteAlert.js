@@ -1,3 +1,11 @@
+let show = localStorage.getItem('showLabel');
+
+if (show === 'true') {
+  label = document.getElementById('changeAlert');
+  label.classList.remove('hidden');
+}
+
+
 
 function deleteFile(id) {
   let element = document.querySelector('#btnDelete');
@@ -7,4 +15,15 @@ function deleteFile(id) {
 function deleteUser(id) {
   let element = document.querySelector('#btnDelete');
   element.setAttribute('href', '../../controller/users/delete.php?id='+id);
+}
+
+function showAlert() {
+
+  show = localStorage.setItem('showLabel', 'true');
+
+}
+function noShowAlert() {
+
+  show = localStorage.setItem('showLabel', 'false');
+
 }

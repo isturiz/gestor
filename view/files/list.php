@@ -68,6 +68,10 @@
 
         </div>
 
+       
+        
+
+
         <table class="w-full text-sm text-left text-gray-400" id="table-file">
           <thead class="text-xs uppercase bg-gray-700 text-gray-400">
             <tr>
@@ -116,15 +120,13 @@
                     </svg>
                   </a>
 
-                  <!-- ELIMINAR ARCHIVOS -->
-                  <!-- <a href="../../controller/files/delete.php?id=<?php //echo $row['idArchivo'] 
-                                                                      ?>" class="text-red-500" data-modal-toggle="deleteAlert"> -->
-
                   <button class="text-red-500" type="button" data-modal-toggle="deleteAlert" targetEl="" onclick="deleteFile('<?php echo ($row['idArchivo']); ?>')">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                     </svg>
                   </button>
+
+                  
 
                 </td>
               </tr>
@@ -149,5 +151,6 @@
 
   <script src="../../js/search.js"></script>
   <script src="../../js/deleteAlert.js"></script>
+
 
   <?php require_once('../../view/header/htmlEnd.php'); ?>
